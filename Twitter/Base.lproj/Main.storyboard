@@ -48,10 +48,10 @@
             </objects>
             <point key="canvasLocation" x="-4138.3999999999996" y="-326.08695652173918"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Home-->
         <scene sceneID="vJa-ZE-3VE">
             <objects>
-                <tableViewController id="1vM-kQ-ePZ" sceneMemberID="viewController">
+                <tableViewController id="1vM-kQ-ePZ" customClass="HomeTableTableViewController" customModule="Twitter" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Eta-BB-3Yt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -71,7 +71,14 @@
                             <outlet property="delegate" destination="1vM-kQ-ePZ" id="1Dc-iB-LKA"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="Noh-J8-kcN"/>
+                    <navigationItem key="navigationItem" title="Home" id="Noh-J8-kcN">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="msb-JV-h9E">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="onLogout:" destination="1vM-kQ-ePZ" id="CjL-rq-lGW"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Muw-Mx-r3W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -84,6 +91,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Rzc-MU-NUN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.86104865303865619" green="1" blue="0.48392347528189505" alpha="0.84705882352941175" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="1vM-kQ-ePZ" kind="relationship" relationship="rootViewController" id="vou-nn-gly"/>
